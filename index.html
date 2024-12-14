@@ -16,7 +16,7 @@
     </div>
   </header>
 
-  <!-- Sobre Nós -->
+  <!-- Seção Sobre -->
   <section id="sobre" class="sobre">
     <h2>Sobre Nós</h2>
     <p>Somos especializados em criar doces que combinam sabor, beleza e arte.</p>
@@ -36,7 +36,7 @@
     </div>
   </section>
 
-  <!-- Galeria de Doces -->
+  <!-- Galeria -->
   <section id="galeria" class="galeria">
     <h2>Galeria de Doces</h2>
     <div class="gallery">
@@ -50,21 +50,11 @@
         <h3>Bolo de Morango</h3>
         <p>R$ 45,00</p>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1588247867329-5e772d8a6981?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Macarons franceses">
-        <h3>Macarons Franceses</h3>
-        <p>R$ 25,00</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1513898399335-fdc1a5d6ddf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Donuts variados">
-        <h3>Donuts Variados</h3>
-        <p>R$ 15,00</p>
-      </div>
     </div>
     <button class="btn-load-more" onclick="loadMore()">Carregar Mais</button>
   </section>
 
-  <!-- Formulário de Contato -->
+  <!-- Formulário -->
   <section id="contato" class="contato">
     <h2>Fale Conosco</h2>
     <form id="form-contato">
@@ -86,6 +76,34 @@
     <p>&copy; 2024 Doces Deliciosos. Todos os direitos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Função para carregar mais doces
+    function loadMore() {
+      const gallery = document.querySelector('.gallery');
+      const newCards = [
+        {
+          img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+          title: 'Cookies de Chocolate',
+          price: 'R$ 20,00'
+        },
+        {
+          img: 'https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+          title: 'Sorvetes Variados',
+          price: 'R$ 18,00'
+        }
+      ];
+
+      newCards.forEach(card => {
+        const div = document.createElement('div');
+        div.className = 'card';
+        div.innerHTML = `
+          <img src="${card.img}" alt="${card.title}">
+          <h3>${card.title}</h3>
+          <p>${card.price}</p>
+        `;
+        gallery.appendChild(div);
+      });
+    }
+  </script>
 </body>
 </html>
