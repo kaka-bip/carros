@@ -3,63 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vendas de Carros</title>
+  <title>Doces Deliciosos</title>
   <link rel="stylesheet" href="carros.css">
 </head>
 <body>
   <header class="header">
-    <h1>Vendas de Carros</h1>
-    <p>Encontre o carro ideal para você!</p>
+    <h1>Doces Deliciosos</h1>
+    <p>Explore os doces mais saborosos e bonitos!</p>
   </header>
 
   <main class="container">
-    <!-- Por Preço -->
-    <section class="category">
-      <h2>Por Preço</h2>
-      <div class="card-grid">
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200?text=Carro+Econômico" alt="Carro Econômico">
-          <h3>Carro Econômico</h3>
-          <p>R$ 30.000</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200?text=Carro+Médio" alt="Carro Médio">
-          <h3>Carro Médio</h3>
-          <p>R$ 60.000</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200?text=Carro+Luxo" alt="Carro de Luxo">
-          <h3>Carro de Luxo</h3>
-          <p>R$ 150.000</p>
-        </div>
+    <section class="gallery">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Cupcake colorido">
+        <h3>Cupcake Colorido</h3>
+        <p>Preço: R$ 12,00</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606312613814-d4362c6f7bc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Bolo de morango">
+        <h3>Bolo de Morango</h3>
+        <p>Preço: R$ 45,00</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1588247867329-5e772d8a6981?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Macarons franceses">
+        <h3>Macarons Franceses</h3>
+        <p>Preço: R$ 25,00</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1513898399335-fdc1a5d6ddf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Donuts variados">
+        <h3>Donuts Variados</h3>
+        <p>Preço: R$ 15,00</p>
       </div>
     </section>
 
-    <!-- Por Raridade -->
-    <section class="category">
-      <h2>Por Raridade</h2>
-      <div class="card-grid">
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200?text=Carro+Comum" alt="Carro Comum">
-          <h3>Carro Comum</h3>
-          <p>R$ 20.000</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200?text=Carro+Raro" alt="Carro Raro">
-          <h3>Carro Raro</h3>
-          <p>R$ 100.000</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200?text=Carro+Exclusivo" alt="Carro Exclusivo">
-          <h3>Carro Exclusivo</h3>
-          <p>R$ 300.000</p>
-        </div>
-      </div>
-    </section>
+    <button class="btn-load-more" onclick="loadMore()">Ver Mais Doces</button>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2024 Vendas de Carros. Todos os direitos reservados.</p>
+    <p>&copy; 2024 Doces Deliciosos. Feito com amor por você!</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
