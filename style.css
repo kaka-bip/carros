@@ -1,21 +1,87 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1{
-    background-color: lightslategray;
-    height: 300px;
-    width: 300px;
-
-    border: 10px solid  rgb(220, 23, 23);
-
-    padding: 10px;
-
-    margin: 20px 20px 40px 20px;
-
-    outline: 5px dashed salmon;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-a{
-    border: 10px solid red;
+.header {
+  text-align: center;
+  background: #007BFF;
+  color: #fff;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.category {
+  margin-bottom: 40px;
+}
+
+.category h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #007BFF;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin: 15px 0;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.footer {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  margin-top: 20px;
 }
