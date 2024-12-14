@@ -7,77 +7,85 @@
   <link rel="stylesheet" href="carros.css">
 </head>
 <body>
+  <!-- Cabeçalho -->
   <header class="header">
-    <h1>Doces Deliciosos</h1>
-    <p>Explore os doces mais saborosos e bonitos!</p>
+    <div class="overlay">
+      <h1>Doces Deliciosos</h1>
+      <p>Descubra os doces mais incríveis e saborosos!</p>
+      <a href="#galeria" class="btn-primary">Explore Agora</a>
+    </div>
   </header>
 
-  <main class="container">
-    <section class="gallery">
+  <!-- Sobre Nós -->
+  <section id="sobre" class="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Somos especializados em criar doces que combinam sabor, beleza e arte.</p>
+    <div class="sobre-cards">
+      <div class="card">
+        <h3>Artesanal</h3>
+        <p>Doces feitos com dedicação e ingredientes selecionados.</p>
+      </div>
+      <div class="card">
+        <h3>Entrega Rápida</h3>
+        <p>Receba seus doces na sua casa com conforto e agilidade.</p>
+      </div>
+      <div class="card">
+        <h3>Exclusividade</h3>
+        <p>Criações únicas para momentos especiais.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria de Doces -->
+  <section id="galeria" class="galeria">
+    <h2>Galeria de Doces</h2>
+    <div class="gallery">
       <div class="card">
         <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Cupcake colorido">
         <h3>Cupcake Colorido</h3>
-        <p>Preço: R$ 12,00</p>
+        <p>R$ 12,00</p>
       </div>
       <div class="card">
         <img src="https://images.unsplash.com/photo-1606312613814-d4362c6f7bc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Bolo de morango">
         <h3>Bolo de Morango</h3>
-        <p>Preço: R$ 45,00</p>
+        <p>R$ 45,00</p>
       </div>
       <div class="card">
         <img src="https://images.unsplash.com/photo-1588247867329-5e772d8a6981?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Macarons franceses">
         <h3>Macarons Franceses</h3>
-        <p>Preço: R$ 25,00</p>
+        <p>R$ 25,00</p>
       </div>
       <div class="card">
         <img src="https://images.unsplash.com/photo-1513898399335-fdc1a5d6ddf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Donuts variados">
         <h3>Donuts Variados</h3>
-        <p>Preço: R$ 15,00</p>
+        <p>R$ 15,00</p>
       </div>
-    </section>
+    </div>
+    <button class="btn-load-more" onclick="loadMore()">Carregar Mais</button>
+  </section>
 
-    <button class="btn-load-more" onclick="loadMore()">Ver Mais Doces</button>
-  </main>
+  <!-- Formulário de Contato -->
+  <section id="contato" class="contato">
+    <h2>Fale Conosco</h2>
+    <form id="form-contato">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
 
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
   <footer class="footer">
-    <p>&copy; 2024 Doces Deliciosos. Feito com amor por você!</p>
+    <p>&copy; 2024 Doces Deliciosos. Todos os direitos reservados.</p>
   </footer>
 
-  <script>
-  // Simula o carregamento de mais doces ao clicar no botão
-function loadMore() {
-  const gallery = document.querySelector('.gallery');
-  const newCards = [
-    {
-      img: 'https://images.unsplash.com/photo-1563805042-7684bcde808e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
-      title: 'Chocolate Quente',
-      price: 'R$ 10,00'
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
-      title: 'Cookies de Chocolate',
-      price: 'R$ 20,00'
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1551024709-8f23befc6c9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
-      title: 'Sorvete de Frutas',
-      price: 'R$ 18,00'
-    },
-  ];
-
-  newCards.forEach(card => {
-    const cardElement = document.createElement('div');
-    cardElement.classList.add('card');
-    cardElement.innerHTML = `
-      <img src="${card.img}" alt="${card.title}">
-      <h3>${card.title}</h3>
-      <p>Preço: ${card.price}</p>
-    `;
-    gallery.appendChild(cardElement);
-  });
-
-  alert('Novos doces adicionados!');
-}
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
