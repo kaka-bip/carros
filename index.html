@@ -43,6 +43,41 @@
     <p>&copy; 2024 Doces Deliciosos. Feito com amor por você!</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+  // Simula o carregamento de mais doces ao clicar no botão
+function loadMore() {
+  const gallery = document.querySelector('.gallery');
+  const newCards = [
+    {
+      img: 'https://images.unsplash.com/photo-1563805042-7684bcde808e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+      title: 'Chocolate Quente',
+      price: 'R$ 10,00'
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+      title: 'Cookies de Chocolate',
+      price: 'R$ 20,00'
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1551024709-8f23befc6c9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+      title: 'Sorvete de Frutas',
+      price: 'R$ 18,00'
+    },
+  ];
+
+  newCards.forEach(card => {
+    const cardElement = document.createElement('div');
+    cardElement.classList.add('card');
+    cardElement.innerHTML = `
+      <img src="${card.img}" alt="${card.title}">
+      <h3>${card.title}</h3>
+      <p>Preço: ${card.price}</p>
+    `;
+    gallery.appendChild(cardElement);
+  });
+
+  alert('Novos doces adicionados!');
+}
+  </script>
 </body>
 </html>
